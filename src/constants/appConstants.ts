@@ -1,0 +1,1 @@
+const GTFS_URL = 'https://data.pid.cz/PID_GTFS.zip';

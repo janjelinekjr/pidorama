@@ -3,8 +3,6 @@ import unzipper from 'unzipper';
 import fs from 'fs';
 import path from 'path';
 
-const GTFS_URL = 'https://data.pid.cz/PID_GTFS.zip';
-
 export async function downloadAndExtractGTFS(): Promise<void> {
     console.log('Downloading GTFS ZIP...');
     const response = await fetch(GTFS_URL);
