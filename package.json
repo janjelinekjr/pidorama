@@ -25,6 +25,7 @@
     "@types/node": "^22.15.18",
     "@types/pg": "^8.15.1",
     "@types/unzipper": "^0.10.11",
+    "nodemon": "^3.1.10",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   }

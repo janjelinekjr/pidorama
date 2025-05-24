@@ -2,6 +2,7 @@ import fetch from 'node-fetch';
 import unzipper from 'unzipper';
 import fs from 'fs';
 import path from 'path';
+import { GTFS_URL } from '../constants/appConstants';
 
 export async function downloadAndExtractGTFS(): Promise<void> {
     console.log('Downloading GTFS ZIP...');
