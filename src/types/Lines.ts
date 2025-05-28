@@ -10,11 +10,8 @@ enum SortByEnum {
     DURATION = 'duration'
 }
 
-export type LineFulltextSearchRequestBody = {
-    search: string;
-}
-
 export type LinesFilterRequestBody = {
+    search: string;
     type: Array<'0' | '1' | '2' | '3' | '4'>
     agency: string[];
     night: boolean;
@@ -28,6 +25,4 @@ export type LinesFilterRequestBody = {
     maxDuration: number;
     days: Array<DaysInWeekEnum>
     sort: Array<{ by: SortByEnum; order: 'asc' | 'desc' }>
-    page: number;
-    limit: number;
 }

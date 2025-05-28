@@ -1,9 +1,9 @@
 import express from 'express';
-import { getAndFilterLines, getLinesFulltextSearch } from '../controllers/lineController';
+import { getLines } from '../controllers/lineController';
+import {asyncHandler} from "../utils/generalUtils";
 
 const router = express.Router();
 
-router.route('/').post(getAndFilterLines);
-router.route('/search').post(getLinesFulltextSearch);
+router.route('/').post(asyncHandler(getLines));
 
 export default router;

@@ -3,6 +3,7 @@ import unzipper from 'unzipper';
 import fs from 'fs';
 import path from 'path';
 import { GTFS_URL } from '../constants/appConstants';
+import express from 'express';
 
 export async function downloadAndExtractGTFS(): Promise<void> {
     console.log('Downloading GTFS ZIP...');
@@ -26,3 +27,6 @@ export async function downloadAndExtractGTFS(): Promise<void> {
             .on('error', reject);
     });
 }
+
+export const asyncHandler = (fn: any) => (req: any, res: any, next: any) =>
+    Promise.resolve(fn(req, res, next)).catch(next);
